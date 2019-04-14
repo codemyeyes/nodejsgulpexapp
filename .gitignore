@@ -47,5 +47,4 @@ assets/node_modules/
 bower_components
 node_modules
 dist
-
-
+package-lock.json

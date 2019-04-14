@@ -48,3 +48,10 @@ gulp.task('sass', function () {
 
 // gulp.task('default', ['msg','copyHtml','imageMin','minify','sass']);
 gulp.task('default', gulp.parallel('msg','copyHtml','imageMin','minify','sass'));
+
+gulp.task('watch', function () {
+    gulp.watch('src/js/*.js', gulp.series('minify'));
+    gulp.watch('src/images/*.js', gulp.series('imageMin'));
+    gulp.watch('src/sass/*.js', gulp.series('sass'));
+    gulp.watch('src/*.html', gulp.series('copyHtml'));
+});
